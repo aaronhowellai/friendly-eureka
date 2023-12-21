@@ -24,7 +24,7 @@ def main(args):
     train_model(args.reg_rate, X_train, X_test, y_train, y_test)
 
 
-def get_csvs_df(path):
+def get_csvs_df(args.training_data):
     if not os.path.exists(path):
         raise RuntimeError(f"Cannot use non-existent path provided: {path}")
     csv_files = glob.glob(f"{path}/*.csv")
